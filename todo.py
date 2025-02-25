@@ -2,7 +2,7 @@ tasks = []
 
 
 def add_task(task):
-    tasks = task
+    tasks.append(task)    // Correctly append the tasks to the list
     print(f"Task '{task}' added!")
 
 
