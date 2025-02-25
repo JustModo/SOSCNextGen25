@@ -5,7 +5,7 @@ void bubbleSort(int arr[], int n)
     int i, j, temp;
     for (i = 0; i < n - 1; i++)
     {
-        for (j = 0; j < n; j++)
+        for (j = 0; j < n - i - 1; j++)  // The issue was to Fix-Reduce range of j
         {
             if (arr[j] > arr[j + 1])
             {
@@ -27,7 +27,7 @@ void printArray(int arr[], int size)
 int main()
 {
     int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = 7;
+    int n = sizeof(arr) / sizeof(arr[0]);
 
     printf("Original array: \n");
     printArray(arr, n);
