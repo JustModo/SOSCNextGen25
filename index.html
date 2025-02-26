@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Click Counter</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 50px;
-      }
-      .counter-box {
-        background: #f2f2f2;
-        padding: 20px;
-        border-radius: 10px;
-        width: 200px;
-        margin: auto;
-      }
-      #count {
-        font-size: 24px;
-        color: blue;
-      }
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Simple Click Counter</h1>
 
-    <div class="counter-box">
-      <p>Click Count: <span id="count">0</span></p>
-      <button id="btn">Increase</button>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
 
-    <script>
-      let count = 0;
-      document
-        .getElementById("btn")
-        .addEventListener("click", function () {
-          count =+ 1;
-          document.getElementById("count").innerText = count;
-        });
-    </script>
-  </body>
+    .counter-box {
+      background: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      margin: auto;
+    }
+
+    #count {
+      font-size: 24px;
+      color: blue;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-width: 1px solid black; 
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Simple Click Counter</h1>
+
+  <div class="counter-box">
+    <p>Click Count: <span id="count">0</span></p>
+    <button id="inc-btn">Increase</button>
+    <button id="dec-btn">Decrease</button>
+  </div>
+
+  <script>
+    let count = 0;
+    document
+      .getElementById("inc-btn")
+      .addEventListener("click", function () {
+        count = count + 1;
+        document.getElementById("count").innerText = count;
+      });
+
+    document
+      .getElementById("dec-btn")
+      .addEventListener("click", function () {
+        count = count - 1;
+        document.getElementById("count").innerText = count;
+      });
+
+  </script>
+</body>
+
 </html>
