@@ -3,9 +3,9 @@
 void bubbleSort(int arr[], int n)
 {
     int i, j, temp;
-    for (i = 0; i < n - 1; i++)
+    for (i = 1; i < n - 1; i++)
     {
-        for (j = 0; j < n; j++)
+        for (j = 0; j < n-i; j++)
         {
             if (arr[j] > arr[j + 1])
             {
@@ -31,9 +31,9 @@ int main()
 
     printf("Original array: \n");
     printArray(arr, n);
-
+   
     bubbleSort(arr, n);
-
+  
     printf("Sorted array: \n");
     printArray(arr, n);
 
