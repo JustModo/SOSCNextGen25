@@ -14,36 +14,78 @@
         background: #f2f2f2;
         padding: 20px;
         border-radius: 10px;
-        width: 200px;
+        width: 250px;
         margin: auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       }
       #count {
         font-size: 24px;
         color: blue;
       }
+      .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
       button {
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+
+      #increase{
+        background-color: green;
+        color: white;
+        border: none;
+      }
+      #decrease{
+        background-color: red;
+        color: white;
+        border: none;
+      }
+      #reset{
+        background-color: #808080;
+        color: white;
+        border: none;
       }
     </style>
   </head>
   <body>
     <h1>Simple Click Counter</h1>
-
     <div class="counter-box">
       <p>Click Count: <span id="count">0</span></p>
-      <button id="btn">Increase</button>
+      <div class="button-group">
+        <button id="increase">Increase</button>
+        <button id="decrease">Decrease</button>
+      </div>
+      <button id="reset">Reset</button>
     </div>
 
     <script>
       let count = 0;
-      document
-        .getElementById("btn")
-        .addEventListener("click", function () {
-          count =+ 1;
-          document.getElementById("count").innerText = count;
-        });
+      
+      function updateDisplay() {
+        document.getElementById("count").innerText = count;
+      }
+      
+      document.getElementById("increase").addEventListener("click", function () {
+        count+=1;
+        updateDisplay();
+      });
+      
+      document.getElementById("decrease").addEventListener("click", function () {
+        if (count > 0) count-=1;
+        updateDisplay();
+      });
+      
+      document.getElementById("reset").addEventListener("click", function () {
+        count = 0;
+        updateDisplay();
+      });
     </script>
   </body>
 </html>
