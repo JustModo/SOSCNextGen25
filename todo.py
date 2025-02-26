@@ -2,7 +2,7 @@ tasks = []
 
 
 def add_task(task):
-    tasks = task
+    tasks.append(task)
     print(f"Task '{task}' added!")
 
 
@@ -17,4 +17,5 @@ def show_tasks():
 
 add_task("Buy groceries")
 add_task("Complete homework")
+add_task("Go to gym")
 show_tasks()
