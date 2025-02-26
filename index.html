@@ -21,29 +21,43 @@
         font-size: 24px;
         color: blue;
       }
-      button {
+      #increase-button {
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
+        width: 14vh;
+        margin-top: 1vh;
+      }
+      #decrease-btn{
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 14vh;
+        margin-top: 1vh;
       }
     </style>
   </head>
   <body>
     <h1>Simple Click Counter</h1>
-
     <div class="counter-box">
       <p>Click Count: <span id="count">0</span></p>
-      <button id="btn">Increase</button>
+      <button id="increase-button">Increase</button>
+      <button id="decrease-btn">Decrease</button>
     </div>
 
     <script>
       let count = 0;
-      document
-        .getElementById("btn")
-        .addEventListener("click", function () {
-          count =+ 1;
-          document.getElementById("count").innerText = count;
-        });
+      const incBtn = document.querySelector("#increase-button");
+      const countText = document.querySelector("#count");
+      incBtn.addEventListener("click",()=>{
+        count++;
+        countText.textContent = count;
+      });
+      const decBtn = document.querySelector("#decrease-btn");
+      decBtn.addEventListener("click",()=>{
+        count--;
+        countText.textContent = count;
+      });
     </script>
   </body>
 </html>
