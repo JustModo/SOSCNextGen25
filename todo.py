@@ -2,7 +2,8 @@ tasks = []
 
 
 def add_task(task):
-    tasks = task
+    global tasks
+    tasks.append(task)
     print(f"Task '{task}' added!")
 
 
