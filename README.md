@@ -2,4 +2,4 @@
 
 ### 🎨 **Add your name below and make your mark!** ✨  
 
-[ Name ] was here!
+Bhoomika Poojary was here!
