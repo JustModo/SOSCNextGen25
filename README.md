@@ -2,4 +2,4 @@
 
 ### 🎨 **Add your name below and make your mark!** ✨  
 
-[ Name ] was here!
+Aravind P Sagar was here!
